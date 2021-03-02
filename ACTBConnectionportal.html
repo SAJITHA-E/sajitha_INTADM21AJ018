@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>ACTB CONNECTION PORTAL</title>
+<script type="text/javascript">
+	function connectionValidation() {
+
+		var customerName = document.connection.cusnam.value;
+		var customerEmail = document.connection.cuseml.value;
+		var mobileNumber = document.connection.mobnum.value;
+		var broadbandType = document.connection.brdtyp.value;
+		var schemeName = document.connection.schnam.value;
+		var connectionDuration = document.connection.cntdur.value;
+
+		if (customerName == "" || customerName == null) {
+			alert("customer name cannot be left blank");
+		} else if (customerEmail == "" || customerEmail == null) {
+			alert("customer email adress cannot be left blank");
+		} else if (mobileNumber == "" || mobileNumber == null) {
+			alert("mobile number cannot be left blank");
+		} else if (broadbandType == "" || broadbandType == null) {
+			alert("broadband type cannot be left blank");
+		} else if (schemeName == "" || sschemeName == null) {
+			alert("scheme name cannot be left blank");
+		} else if (connectionDuration == "" || connectionDuration == null) {
+			alert("connection duration cannot be left blank");
+		}
+	}
+</script>
+</head>
+<body>
+	<center>
+		<h2>ACTB Connection Portal</h2>
+		<form action="" name="connection"
+			onsubmit="return connectionValidation()">
+			<table>
+				<tr>
+					<td>customerName</td>
+					<td><input type="text" name="cusnam"></td>
+				</tr>
+				<tr>
+					<td>customerEmail</td>
+					<td><input type="text" name="cuseml"></td>
+				</tr>
+				<tr>
+					<td>mobileNumber</td>
+					<td><input type="text" name="mobnum"></td>
+				</tr>
+				<tr>
+					<td>broadbandType</td>
+					<td><input type="text" name="brdtyp"></td>
+				</tr>
+				<tr>
+					<td>schemeName</td>
+					<td><input type="text" name="schnam"></td>
+				</tr>
+				<tr>
+					<td>connectionDuration</td>
+					<td><input type="text" name="cntdur"></td>
+				</tr>
+
+				<tr>
+					<td><input type="Submit" name="Submit" value="Submit"></td>
+					<td><input type="Reset" name="Reset" value="Reset"></td>
+
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>

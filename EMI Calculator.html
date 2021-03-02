@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>EMI CALCULATOR</title>
+<script type="text/javascript">
+	function calculatorValidation() {
+
+		var loanAmount = document.calculator.lnamt.value;
+		var interestRate = document.calculator.intrt.value;
+		var loanTerm = document.calculator.lntrm.value;
+
+		if (loanAmount == "" || loanAmount == null) {
+			alert("loan amount cannot be left blank");
+		} else if (interestRate == "" || interestRate == null) {
+			alert("interest rate cannot be left blank");
+		} else if (loanTerm == "" || loanTerm == null) {
+			alert("loan term cannot be left blank");
+		}
+
+	}
+</script>
+</head>
+<body>
+	<center>
+		<h2>EMI CALCULATOR</h2>
+		<form action="" name="calculator"
+			onsubmit="return calculatorValidation()">
+			<table>
+				<tr>
+					<td>loanAmount</td>
+					<td><input type="text" name="lnamt"></td>
+				</tr>
+				<tr>
+					<td>interestRate</td>
+					<td><input type="text" name="intrt"></td>
+				</tr>
+				<tr>
+					<td>loanTerm</td>
+					<td><input type="text" name="lntrm"></td>
+				</tr>
+
+				<tr>
+
+					<td><input type="Submit" name="Submit" value="Submit">
+					</td><td><input type="Reset" name="Reset" value="Reset"></td>
+
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
